@@ -19,5 +19,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', include('VibeLive.urls')),
 ]
+
+admin.site.site_header = "VibeStream Admin"
+admin.site.site_title = "VibeStream Admin Portal"
+admin.site.index_title = "Welcome to VibeStream Admin Portal"
